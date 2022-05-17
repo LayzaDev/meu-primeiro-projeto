@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Fontes abaixo-->
+    <!-- Fontes abaixo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="estilo.css">
 
 </head>
+
 <body onload="carregar()">
+    
     <header>
         <h1>Hora do Dia</h1>
     </header>
@@ -27,7 +29,7 @@
         </div>
 
         <div id = 'foto'>
-           <img id = 'imagem' src="fotomanha.png" alt="Foto do dia"/>
+           <img id = 'imagem' src="fotomanha1.png" alt="Foto do dia"/>
         </div>
 
     </section>
@@ -37,45 +39,48 @@
     </footer>
 
     <script>
+
+    function carregar() {
+        var msg = window.document.getElementById('msg')
+        var img = window.document.getElementById('imagem')  
+        var data = new Date()
+        var hora = data.getHours()
+        var minuto = data.getMinutes()
         
-        function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')  
-    var data = new Date()
-    var hora = data.getHours()
-    var minuto = data.getMinutes()
-   
-    if(minuto < 10){
+        /*var hora = 22
+        msg.innerHTML = `Agora são ${hora} hrs.`*/
 
-        msg.innerHTML = `Agora são ${hora}:0${minuto} hrs.`
+        if(minuto < 10){
 
-    } else {
+            msg.innerHTML = `Agora são ${hora}:0${minuto} hrs.`
 
-        msg.innerHTML = `Agora são ${hora}:${minuto} hrs.`
-        
-    }
+        } else {
 
-    if ( hora >= 0 && hora < 12 ) {
+            msg.innerHTML = `Agora são ${hora}:${minuto} hrs.`
+            
+        }
 
-        msg.innerHTML += '<p>Bom dia!</p>'
-        img.src = 'fotomanha.png'
-        document.body.style.background = '#87ae8e'
+        if ( hora >= 0 && hora < 12 ) {
 
-    } else if ( hora >= 12 && hora < 18 ) {
+            msg.innerHTML += '<p>Bom dia!</p>'
+            img.src = 'fotomanha1.png'
+            document.body.style.background = '#afb7b5'
 
-        msg.innerHTML += '<p>Boa tarde!</p>'
-        img.src = 'fototarde.png'
-        document.body.style.background = '#89bdd4'
+        } else if ( hora >= 12 && hora < 18 ) {
 
-    } else {
+            msg.innerHTML += '<p>Boa tarde!</p>'
+            img.src = 'fototarde.png'
+            document.body.style.background = '#89bdd4'
 
-        msg.innerHTML  += '<p>Boa noite!</p>'
-        img.src = 'fotonoite.png'
-        document.body.style.background = '#36686b'
+        } else {
+
+            msg.innerHTML  += '<p>Boa noite!</p>'
+            img.src = 'fotonoite.png'
+            document.body.style.background = '#36686b'
+
+        }
 
     }
-
-}
 
     </script>
     
