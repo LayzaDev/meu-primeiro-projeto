@@ -26,8 +26,8 @@ O site é responsável por verificar e informar ao cliente a hora atual do dia. 
 
 ## **Resultado final:**
 
-[LINK DO SITE:](https://layzadev.github.io/meu-primeiro-projeto/)
+[LINK DO SITE](https://layzadev.github.io/meu-primeiro-projeto/)
 
 ## **Créditos**
 
-[Curso em vídeo:](https://www.youtube.com/c/CursoemV%C3%ADdeo)
+[Curso em vídeo](https://www.youtube.com/c/CursoemV%C3%ADdeo)
